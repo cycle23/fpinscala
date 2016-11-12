@@ -9,7 +9,7 @@ def hasSubsequence[A](sup: List[A], sub: List[A]): Boolean = {
       // ate all input but still had non-matched items
       case (Nil, _) => false
       case (a :: as,x :: xs) =>
-        if (a !=x ) // restart match pattern
+        if (a != x ) // restart match pattern
           checkSeq(as, sub)
         else
           checkSeq(as, xs)
